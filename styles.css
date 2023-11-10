@@ -1,0 +1,71 @@
+/* Variable Declaration */
+:root{
+    --black: rgb(0,0,0);
+    --dark-grey: rgb(15,15,15, 0.8);
+    --container-color: rgb(50,50,50);
+    --total-container-color: rgb(255,255,255);
+    --test-color: rgb(191, 128, 255);
+    --text-size: 1.25rem;
+}
+
+/* Common Styling */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container of Image and Form */
+.total-container {
+    display: grid;
+    grid-template-columns: calc(100% - 65%) auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(--total-container-color);
+    /* background: linear-gradient(to bottom, var(--opac-white),var(--dark-grey)); */
+}
+
+/* Image Section */
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 50% 25%;
+    place-items: center;
+    color: var(--total-container-color);
+    background-color: var(--container-color);
+} 
+
+.image-container > img {
+    width: calc(70%)
+}
+
+.company-name {
+    place-items: start;
+    text-align: left;
+    font-size: 2rem;
+    align-self: start;
+    justify-self: start;
+}
+
+h1 {
+    display: block;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+    padding: 0rem 1rem;
+    font-weight: bold;
+}
+p {
+    margin-top: 5vh;
+    align-self: center;
+    font-size: var(--text-size);
+    text-align: center;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
