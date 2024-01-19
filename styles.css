@@ -1,51 +1,53 @@
 /* Variable Declaration */
-:root{
-    --black: rgb(0,0,0);
-    --dark-grey: rgb(15,15,15, 0.8);
-    --container-color: rgb(50,50,50);
-    --total-container-color: rgb(255,255,255);
-    --test-color: rgb(191, 128, 255);
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #2E5266;
+    --third-color: #6E8898;
+    --black: #000000;
+    --light-grey: #D3D3D3;
+    --container-color: #323232;
+    --total-container-color: #FFFFFF;
     --text-size: 1.25rem;
+    --font-family: 'Poppins', sans-serif;
 }
 
 /* Common Styling */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* Container of Image and Form */
 .total-container {
     display: grid;
-    grid-template-columns: calc(100% - 65%) auto;
+    grid-template-columns: 35% 65%;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(--total-container-color);
-    /* background: linear-gradient(to bottom, var(--opac-white),var(--dark-grey)); */
+    background-color: var(--primary-color);
 }
-
-/* Image Section */
 
 .image-container {
     display: grid;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./GreenLeaf.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./GreenLeaf.avif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
     grid-template-columns: 1fr;
     grid-template-rows: 25% 50% 25%;
     place-items: center;
-    color: var(--total-container-color);
+    color: var(--primary-color);
     background-color: var(--container-color);
 } 
 
-.image-container > img {
-    width: calc(70%)
+.image-container img {
+    width: 70%;
 }
 
 .company-name {
+    padding-top: 3vh;
+    padding-left: 3vh;
     place-items: start;
     text-align: left;
     font-size: 2rem;
@@ -53,23 +55,98 @@
     justify-self: start;
 }
 
-h1 {
-    display: block;
-    margin-block-start: 0.67rem;
-    margin-block-end: 0.67rem;
-    margin-inline-start: 0rem;
-    margin-inline-end: 0rem;
-    padding: 0rem 1rem;
-    font-weight: bold;
-}
-p {
-    margin-top: 5vh;
-    align-self: center;
-    font-size: var(--text-size);
-    text-align: center;
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15vh;
 }
 
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+.right-side-text, .form-container, .button-container {
+    color: var(--secondary-color);
+    padding: 3.75vh 7.5vh;
+    font-size: 1.25rem;
+}
+
+.right-side-text {
+    font-weight: bolder;
+    padding-top: 7.5vh;
+    padding-left: 7.5vh;
+    padding-right: 7.5vh;
+}
+
+.separated-text {
+    margin-top: 5vh;
+    margin-bottom: 7.5vh;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.form-container {
+    padding-top: 0px;
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    font-size: var(--text-size);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-field::placeholder {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+.input-field:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Floating label style */
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+    color: var(--light-grey);
+}
+
+.input-field:focus + .floating-label,
+.input-field:not(:placeholder-shown) + .floating-label {
+    top: -20px;
+    right: 10px;
+    font-size: 12px;
+    color: var(--third-color);
+    opacity: 1;
+}
+
+/* Adjustments for grid and full-width elements */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.button-container {
+    display: block;
+    width: 50vw;
+}
+
+button {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-size: var(--text-size);
+    padding: 10px 50px;
+}
+
+.button-text {
+    margin-top: 25px;
 }

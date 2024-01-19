@@ -4,29 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NordicNeural.AI Signup Page</title>
-    <link rel = "stylesheet" href = "./styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel = "preload" href = "./GreenLeaf.avif">
-    <script src = "./scripts.js"></script>
+    <link rel="preload" href="./GreenLeaf.avif">
+    <script src="./scripts.js"></script>
 </head>
 <body>
-    <main class = "total-container">
-        <div class = "image-container">
-            <h1 class = "company-name">NordicNeural.AI</h1>
-            <img src = "./logo.png">
+    <main class="total-container">
+        <div class="image-container">
+            <h1 class="company-name">NordicNeural.AI</h1>
+            <img src="./logo.png" alt="Company Logo">
             <p>Sign up today to get exciting offers!</p>
         </div>
-        <div class = "form-container">
-            <div class = 'section-1-container'>
-
+        <div class="right-container">
+            <div class = "right-container-center">
+            <div class="right-side-text">
+                <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
+                <p>Sign Up <em>now</em> to get started.</p>
+                <p class="separated-text">You <em>know</em> you want to.</p>
             </div>
-            <div class = 'section-2-container'>
-                
+            <div class="form-container">
+                <form action="/submit-your-form-handler">
+                    <div class="input-container">
+                        <input type="text" id="fname" name="firstname" placeholder="FIRST NAME" class="input-field">
+                        <label for="fname" class="floating-label"></label>
+                        <div class="error"></div>
+                    </div>
+                    <div class = "input-container">
+                        <label for = "lname"></label>
+                        <input type = "text" id = "lname" name = "lastname" placeholder = "LAST NAME" class = "input-field">
+                        <div class = "error"></div>
+                    </div>
+                    <div class = "input-container">
+                        <label for = "email"></label>
+                        <input type = "email" id = "email" name = "email" placeholder = "E-MAIL" class = "input-field">
+                        <div class = "error"></div>
+                    </div>
+                    <div class = "input-container">
+                        <label for = "phone-number"></label>
+                        <input type = "text" id = "phone-number" name = "phone-number" placeholder = "PHONE NUMBER" class = "input-field">
+                        <div class = "error"></div>
+                    </div>
+                    <div class = "input-container">
+                        <label for = "password"></label>
+                        <input type = "password" id = "password" name = "password" placeholder = "PASSWORD" class = "input-field">
+                        <div class = "error"></div>
+                    </div>
+                    <div class = "input-container">
+                        <label for = "confirm-password"></label>
+                        <input type = "password" id = "confirm-password" name = "confirm-password" placeholder = "CONFIRM PASSWORD" class = "input-field">
+                        <div class = "error"></div>
+                    </div>
+                </form>
             </div>
-            <div class = 'section-3-container'>
-                
+            <div class = "button-container">
+                <button>
+                    Create Account
+                </button>
+                <p class = "button-text">
+                    Already have an account..? <span> Log in </span>
+                </p>
             </div>
         </div>
+    </div>
     </main>
 </body>
 </html>
